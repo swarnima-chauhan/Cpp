@@ -21,5 +21,5 @@ int main(){
     else{
         cout<<"Present at index:"<<res<<endl;
     }
-
+    return 0;
 }
