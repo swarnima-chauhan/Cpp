@@ -7,6 +7,7 @@ int main(){
     cin>>n;
     char count='A';
 
+    //ghguikjn
     //Floyd's traingle
     // for(int i=0;i<n;i++){
     //     for(int j=0;j<i+1;j++){
