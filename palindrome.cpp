@@ -12,9 +12,13 @@ bool isPalindrome(long long n){
     return (reverse==n);
 }
 
+bool isPalindrome(string s){
+    
+}
+
 int main(){
     cout<<endl;
-    
+
     long long n;
     cout<<"Enter number to check if it is palindrome or not :";
     cin>>n;
