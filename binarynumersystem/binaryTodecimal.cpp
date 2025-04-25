@@ -3,22 +3,23 @@ using namespace std;
 
 int binaryTodecimal(int n){
     int ans=0;
-    int p=1;
+    int pow=1;
     while(n>0){
         int rem=n%10;
+        ans=ans+pow*rem;
+
         n=n/10;
-        ans=ans+p*rem;
-        p=p*2;
+        pow=pow*2;
     }
-    return ans;//decimal number
+    return ans;//decimal form
 }
 
 int main(){
-    int n;
-    cout<<"Enter the number :";
-    cin>>n;
+    int binNum;
+    cout<<"Enter the Binary number :";
+    cin>>binNum;
 
-    int res=binaryTodecimal(n);
+    int res=binaryTodecimal(binNum);
     cout<<res<<endl;
 
 
