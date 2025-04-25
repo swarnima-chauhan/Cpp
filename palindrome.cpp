@@ -12,9 +12,6 @@ bool isPalindrome(long long n){
     return (reverse==n);
 }
 
-bool isPalindrome(string s){
-    
-}
 
 int main(){
     cout<<endl;
