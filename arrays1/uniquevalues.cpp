@@ -16,6 +16,7 @@ void printUnique(int arr[],int size){
             cout<<arr[i]<<" ";
         }
     }
+
     
 }
 
