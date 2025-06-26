@@ -9,10 +9,10 @@ private:
 
 public:
     // non-parameterized constructor
-    Teacher()
-    {
-        cout << "Hi i am constructor\n";
-    }
+    // Teacher()
+    // {
+    //     cout << "Hi i am constructor\n";
+    // }
     // parameterized constructor
     Teacher(string name, string dept, string subject, double salary)
     {
@@ -20,6 +20,16 @@ public:
         this->dept = dept;
         this->subject = subject;
         this->salary = salary;
+    }
+
+    // copy constructor
+    Teacher(Teacher &t) // pass by reference
+    {
+        cout << "Custom Copy constructor called\n";
+        this->name = t.name;
+        this->dept = t.dept;
+        this->subject = t.subject;
+        this->salary = t.salary;
     }
 
     // properties
