@@ -2,38 +2,46 @@
 #include <string>
 using namespace std;
 
-class Student
+class Person
 {
 public:
     string name;
-    double *cgpaPtr;
+    int age;
 
-    Student(string name, double cgpa)
+    Person(string name, int age)
     {
         this->name = name;
-        cgpaPtr = new double;
-        *cgpaPtr = cgpa;
+        this->age = age;
     }
 
-    // destructor
-    ~Student()
+    Person()
     {
-        cout << "Hi, I delete everything" << endl;
-        delete cgpaPtr;
-        // memory leak
+        cout << "Constructor of Person class called" << endl;
+    }
+};
+
+class Student : public Person
+{
+public:
+    int rollno;
+
+    Student(string name, int age, int rollno) : Person(name, age)
+    {
+        this->rollno = rollno;
     }
 
     void getInfo()
     {
-        cout << "Name: " << name << endl;
-        cout << "CGPA: " << *cgpaPtr << endl;
+        cout << "name: " << name << endl;
+        cout << "age: " << age << endl;
+        cout << "roolno: " << rollno << endl;
     }
 };
 
 int main()
 {
-    Student s1("Rahul Kumar", 8.9);
-    s1.getInfo();
+    Student s1("Swarn", 20, 101);
 
+    s1.getInfo();
     return 0;
 }
