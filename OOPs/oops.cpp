@@ -2,35 +2,45 @@
 #include <string>
 using namespace std;
 
-class Student
+class Person
 {
 public:
     string name;
+    int age;
+};
+
+class Student : public Person
+{
+public:
     int rollno;
 };
 
-class Teacher
+class Teacher : public Person
 {
 public:
     string subject;
     double salary;
 };
 
-class TA : public Student, public Teacher
-{
-};
-
 int main()
 {
-    TA s1;
-    s1.name = "Swarn";
+    Student s1;
+    s1.name = "John Doe";
+    s1.age = 20;
     s1.rollno = 101;
-    s1.subject = "C++";
-    s1.salary = 50000;
-
-    cout << "Name: " << s1.name << endl;
+    cout << "Student Name: " << s1.name << endl;
+    cout << "Age: " << s1.age << endl;
     cout << "Roll No: " << s1.rollno << endl;
-    cout << "Subject: " << s1.subject << endl;
-    cout << "Salary: " << s1.salary << endl;
+
+    Teacher t1;
+    t1.name = "Jane Smith";
+    t1.age = 35;
+    t1.subject = "Mathematics";
+    t1.salary = 50000.0;
+    cout << "Teacher Name: " << t1.name << endl;
+    cout << "Age: " << t1.age << endl;
+    cout << "Subject: " << t1.subject << endl;
+    cout << "Salary: " << t1.salary << endl;
+
     return 0;
 }
