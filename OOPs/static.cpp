@@ -2,17 +2,26 @@
 #include <string>
 using namespace std;
 
-void fun()
+class A
 {
-    static int x = 0; // init statement - 1 run
-    cout << x << endl;
-    x++;
-}
+public:
+    static int x;
+
+    void incx()
+    {
+        x++;
+    }
+};
+
+int A::x = 100;
 
 int main()
 {
-    fun();
-    fun();
-    fun();
+    A obj1, obj2;
+    cout << obj1.x << endl;
+    obj1.x = 200;
+    cout << obj2.x << endl;
+    cout << obj1.x << endl;
+
     return 0;
 }
