@@ -2,33 +2,35 @@
 #include <string>
 using namespace std;
 
-class Person
+class Student
 {
 public:
     string name;
-    int age;
+    int rollno;
 };
 
-class Student : public Person
+class Teacher
 {
 public:
-    int rollno;
+    string subject;
+    double salary;
+};
 
-    void getInfo()
-    {
-        cout << "name: " << name << endl;
-        cout << "age: " << age << endl;
-        cout << "roolno: " << rollno << endl;
-    }
+class TA : public Student, public Teacher
+{
 };
 
 int main()
 {
-    Student s1;
+    TA s1;
     s1.name = "Swarn";
-    s1.age = 20;
     s1.rollno = 101;
+    s1.subject = "C++";
+    s1.salary = 50000;
 
-    s1.getInfo();
+    cout << "Name: " << s1.name << endl;
+    cout << "Roll No: " << s1.rollno << endl;
+    cout << "Subject: " << s1.subject << endl;
+    cout << "Salary: " << s1.salary << endl;
     return 0;
 }
