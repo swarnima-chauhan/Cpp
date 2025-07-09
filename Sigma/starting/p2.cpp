@@ -8,10 +8,22 @@ int main()
     cin >> num;
 
     int sum = 0;
+    // finding sum of all digits
+    //  while (num > 0)
+    //  {
+    //      int digit = num % 10;
+    //      sum = sum + digit;
+    //      num = num / 10;
+    //  }
+
+    // finding sum of only odd digits
     while (num > 0)
     {
         int digit = num % 10;
-        sum = sum + digit;
+        if (digit % 2 != 0)
+        {
+            sum = sum + digit;
+        }
         num = num / 10;
     }
 
