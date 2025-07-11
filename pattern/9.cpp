@@ -29,6 +29,23 @@ int main()
     // lower part
     for (int i = 0; i < num; i++)
     {
+        // left side
+        //  spaces
+        for (int j = 0; j < i; j++)
+        {
+            cout << "  ";
+        }
+        // stars
+        for (int j = 0; j < num - i; j++)
+        {
+            cout << "* ";
+        }
+        // right side
+        for (int j = 0; j < num - i - 1; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
     }
     return 0;
 }
