@@ -5,32 +5,32 @@ int main()
 {
     int num = 4;
     // upper body
-    for (int i = 0; i < num; i++)
+    for (int i = 1; i <= num; i++)
     {
         // left side
         // spaces
-        for (int j = 0; j < num - i - 1; j++)
+        for (int j = 0; j < num - i; j++)
         {
             cout << "  ";
         }
         // stars
-        for (int j = 0; j < 2 * (i + 1) - 1; j++)
+        for (int j = 0; j < 2 * (i)-1; j++)
         {
             cout << "* ";
         }
         cout << endl;
     }
 
-    // lower part
-    for (int i = 0; i < num; i++)
+    // another method for lower part
+    for (int i = num; i >= 1; i--)
     {
         // spaces
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j < num - i; j++)
         {
             cout << "  ";
         }
         // stars
-        for (int j = 0; j < 2 * (num - (i + 1)) + 1; j++)
+        for (int j = 0; j < 2 * (i)-1; j++)
         {
             cout << "* ";
         }
