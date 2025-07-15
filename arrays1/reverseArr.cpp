@@ -18,7 +18,7 @@ void reverseArr(int *arr, int n)
 
 int main()
 {
-    int arr[] = {1, 6, 7, 4, 5, 8};
+    int arr[] = {1, 6, 4, 5, 8};
     int n = sizeof(arr) / sizeof(int);
 
     reverseArr(arr, n);
