@@ -3,13 +3,11 @@ using namespace std;
 
 void printSubarrays(int *arr, int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int start = 0; start < n; start++)
     {
-        cout << "Starting Point : " << arr[i] << " ";
-        cout << "ending points: ";
-        for (int j = i; j < n; j++)
+        for (int end = start; end < n; end++)
         {
-            cout << arr[j] << " ";
+            cout << "(" << start << "," << end << ")  ";
         }
         cout << endl;
     }
