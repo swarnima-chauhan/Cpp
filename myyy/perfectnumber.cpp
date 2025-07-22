@@ -12,7 +12,7 @@ bool perfectnumber(int n)
             sum += i;
         }
     }
-    if (sum == n * 2)
+    if (sum == n + 1)
     {
         return true;
     }
@@ -21,7 +21,7 @@ bool perfectnumber(int n)
 
 int main()
 {
-    int n = 28;
+    int n = 2;
     cout << perfectnumber(n);
 
     return 0;
