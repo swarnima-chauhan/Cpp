@@ -21,7 +21,7 @@ int maxSubarraySum(int *arr, int n)
 
 int main()
 {
-    int arr[6] = {2, -3, 6, -5, 4, 2};
+    int arr[7] = {3, -4, 5, 4, -1, 7, -8};
     int n = sizeof(arr) / sizeof(int);
 
     cout << maxSubarraySum(arr, n);
