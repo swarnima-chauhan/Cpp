@@ -3,11 +3,28 @@ using namespace std;
 
 int buySell(int *prices, int n);
 
+int buySell2(int *prices, int n)
+{
+    int min = prices[0];
+    int maxP = 0;
+    int pro = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (prices[i] < min)
+        {
+            min = prices[i];
+        }
+        pro = prices[i] - min;
+        maxP = max(pro, maxP);
+    }
+    return maxP;
+}
+
 int main()
 {
     int prices[] = {7, 1, 5, 3, 6, 4};
     int n = sizeof(prices) / sizeof(int);
-    cout << buySell(prices, n);
+    cout << buySell2(prices, n);
 
     return 0;
 }
