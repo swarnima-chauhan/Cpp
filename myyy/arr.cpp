@@ -10,6 +10,12 @@ void swapp(int *a, int *b)
 
 int main()
 {
+    int n = 4;
+    for (int i = 0; i < 10; i++)
+    {
+        cout << n * (i + 1) << " ";
+    }
+    cout << endl;
 
     for (int i = 0; i < 26; i++)
     {
