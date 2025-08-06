@@ -10,6 +10,7 @@ void swapp(int *a, int *b)
 
 int main()
 {
+    cout << "Just to amintain streak!";
     int n = 4;
     for (int i = 0; i < 10; i++)
     {
