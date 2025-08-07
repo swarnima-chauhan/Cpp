@@ -10,8 +10,16 @@ void swapp(int *a, int *b)
 
 int main()
 {
-    cout << "Just to amintain streak!";
+    cout << "Just to amintain streak!" << endl;
     int n = 4;
+    for (int i = 1; i <= 100; i++)
+    {
+        if (i % n == 0)
+        {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
     for (int i = 0; i < 10; i++)
     {
         cout << n * (i + 1) << " ";
