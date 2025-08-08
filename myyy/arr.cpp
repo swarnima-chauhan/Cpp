@@ -12,6 +12,15 @@ int main()
 {
     cout << "Just to amintain streak!" << endl;
     int n = 4;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    cout << endl;
     for (int i = 1; i <= 100; i++)
     {
         if (i % n == 0)
