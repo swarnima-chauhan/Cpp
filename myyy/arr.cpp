@@ -7,11 +7,17 @@ void swapp(int *a, int *b)
     *b = *a;
     *a = t;
 }
-
+void swappp(int &a, int &b)
+{
+    int p = a;
+    a = b;
+    b = p;
+}
 int main()
 {
     cout << "Just to amintain streak!" << endl;
     int n = 4;
+
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < i; j++)
@@ -55,7 +61,7 @@ int main()
 
     int x = 7;
     int y = 9;
-    swapp(&x, &y);
+    swappp(x, y);
 
     cout << x << " " << y;
 
