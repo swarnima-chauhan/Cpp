@@ -23,6 +23,14 @@ int main()
     cout << endl;
     for (int i = 1; i <= 100; i++)
     {
+        if (i % n == 0 && i % 10 == 0)
+        {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    for (int i = 1; i <= 100; i++)
+    {
         if (i % n == 0)
         {
             cout << i << " ";
