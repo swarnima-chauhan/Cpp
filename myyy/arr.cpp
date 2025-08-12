@@ -15,6 +15,7 @@ void swappp(int &a, int &b)
 }
 int main()
 {
+    cout << "Yes";
     cout << "Just to amintain streak!" << endl;
     int n = 4;
 
