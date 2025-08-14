@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// counting sort,used when the range is short
 void countSort(int arr[], int n)
 {
     int freq[100000]; // range
