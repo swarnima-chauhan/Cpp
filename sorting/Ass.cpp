@@ -64,9 +64,42 @@ void insertionSort(int arr[], int n)
     print(arr, n);
 }
 
+void countSort(int arr[], int n)
+{
+    // Find maximum element
+    int maxVal = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] > maxVal)
+            maxVal = arr[i];
+    }
+
+    // Assuming values are <= 1000 (adjust size if needed)
+    int count[1001] = {0};
+
+    // Count frequency
+    for (int i = 0; i < n; i++)
+    {
+        count[arr[i]]++;
+    }
+
+    // Fill array in descending order
+    int index = 0;
+    for (int i = maxVal; i >= 0; i--)
+    {
+        while (count[i] > 0)
+        {
+            arr[index++] = i;
+            count[i]--;
+        }
+    }
+
+    print(arr, n);
+}
+
 int main()
 {
     int arr[10] = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
-    insertionSort(arr, 10);
+    countSort(arr, 10);
     return 0;
 }
