@@ -28,8 +28,28 @@ void bubbleSort(int arr[], int n)
     print(arr, n);
 }
 
+void selectionSort(int arr[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        int maxIndex = i;
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[j] > arr[maxIndex])
+            {
+                maxIndex = j;
+            }
+        }
+        if (maxIndex != i)
+        {
+            swap(arr[i], arr[maxIndex]);
+        }
+    }
+    print(arr, n);
+}
+
 int main()
 {
     int arr[10] = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
-    bubbleSort(arr, 10);
+    selectionSort(arr, 10);
 }
